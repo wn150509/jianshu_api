@@ -14,4 +14,10 @@ public class Collections {
     @Id
     @GeneratedValue
     private Integer collectionId;
+
+    private String collectionUrl;
+    private String collectionName;
+    private String collectionInfo;
+    private Integer collectionArticle;
+    private Integer collectionFans;
 }

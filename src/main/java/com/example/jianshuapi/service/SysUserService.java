@@ -1,5 +1,6 @@
 package com.example.jianshuapi.service;
 
+import com.example.jianshuapi.entity.Articles;
 import com.example.jianshuapi.entity.LoginUser;
 import com.example.jianshuapi.entity.SysUser;
 import com.example.jianshuapi.utils.ResponseUtil;
@@ -10,4 +11,6 @@ public interface SysUserService {
     ResponseUtil userLogin(LoginUser loginUser);
 
     List<SysUser> getHotUsers();
+
+    SysUser findSomeOne(Integer id);
 }

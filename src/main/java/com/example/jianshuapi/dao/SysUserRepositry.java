@@ -1,5 +1,6 @@
 package com.example.jianshuapi.dao;
 
+import com.example.jianshuapi.entity.Articles;
 import com.example.jianshuapi.entity.SysUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -13,6 +14,8 @@ public interface SysUserRepositry extends JpaRepository<SysUser, Integer> {
      * @return
      */
     SysUser findSysUserByEmail(String email);
+
+    SysUser findSysUserByUserId(Integer id);
 
     /**
      * 根据热度降序排列

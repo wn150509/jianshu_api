@@ -2,10 +2,8 @@ package com.example.jianshuapi.entity;
 
 import lombok.Builder;
 import lombok.Data;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 
 /**
  * SysUser Entity Class
@@ -30,5 +28,4 @@ public class SysUser {
     private String description;
     private Integer wordsCount;
     private Integer likeCount;
-
 }

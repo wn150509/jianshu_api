@@ -1,10 +1,12 @@
 package com.example.jianshuapi.service.serviceimpl;
 
 import com.example.jianshuapi.dao.SysUserRepositry;
+import com.example.jianshuapi.entity.Articles;
 import com.example.jianshuapi.entity.LoginUser;
 import com.example.jianshuapi.entity.SysUser;
 import com.example.jianshuapi.service.SysUserService;
 import com.example.jianshuapi.utils.ResponseUtil;
+import io.swagger.models.auth.In;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -34,5 +36,10 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public List<SysUser> getHotUsers() {
         return sysUserRepositry.findHotUsers();
+    }
+
+    @Override
+    public SysUser findSomeOne(Integer id) {
+        return sysUserRepositry.findSysUserByUserId(id);
     }
 }

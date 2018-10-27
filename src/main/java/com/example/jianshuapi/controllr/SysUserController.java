@@ -18,8 +18,6 @@ import java.util.List;
 public class SysUserController {
     @Resource
     private SysUserService sysUserService;
-    @Resource
-    private ArticlesService articlesService;
 
     @RequestMapping(value = "/sign_in", method = RequestMethod.POST)
     public ResponseUtil signIn(@RequestBody LoginUser loginUser) {
@@ -37,5 +35,11 @@ public class SysUserController {
         SysUser user=sysUserService.findSomeOne(id);
         return new ResponseUtil(0,"get user!",user);
     }
+
+    @RequestMapping(value = "/hotAll", method = RequestMethod.GET)
+    public ResponseUtil getAllHotUsers() {
+        return new ResponseUtil(0, "get hot users!", sysUserService.findAllHotUsers());
+    }
+
 
 }

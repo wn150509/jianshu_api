@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface CollectionsRepositry extends JpaRepository<Collections,Integer> {
     List<Collections>findAll();
+
+    Collections findCollectionsByCollectionId(Integer id);
 }

@@ -28,4 +28,5 @@ public class SysUser {
     private String description;
     private Integer wordsCount;
     private Integer likeCount;
+    private Integer collectionsId;
 }

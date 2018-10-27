@@ -21,4 +21,5 @@ public class Articles {
     private Integer articleComment;
     private Integer articleLike;
     private Integer usersId;
+    private Integer collectionsId;
 }

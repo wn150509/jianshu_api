@@ -2,6 +2,7 @@ package com.example.jianshuapi.dao;
 
 import com.example.jianshuapi.entity.Articles;
 import com.example.jianshuapi.entity.SysUser;
+import com.example.jianshuapi.vo.HotUserVO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -24,4 +25,6 @@ public interface SysUserRepositry extends JpaRepository<SysUser, Integer> {
      */
     @Query("select u FROM SysUser  u ORDER BY u.likeCount DESC ")
     List<SysUser> findHotUsers();
+
+    List<SysUser>findSysUserByCollectionsId(Integer id);
 }

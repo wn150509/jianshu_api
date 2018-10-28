@@ -1,20 +1,15 @@
 package com.example.jianshuapi.controllr;
 
-import com.example.jianshuapi.entity.Articles;
 import com.example.jianshuapi.entity.LoginUser;
 import com.example.jianshuapi.entity.SysUser;
-import com.example.jianshuapi.service.ArticlesService;
 import com.example.jianshuapi.service.SysUserService;
 import com.example.jianshuapi.utils.ResponseUtil;
 import org.springframework.web.bind.annotation.*;
-
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin("http://localhost")
+@CrossOrigin("http://localhost:81")
 public class SysUserController {
     @Resource
     private SysUserService sysUserService;

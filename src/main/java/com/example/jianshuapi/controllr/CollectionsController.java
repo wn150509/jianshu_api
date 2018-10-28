@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/collections")
-@CrossOrigin("http://localhost")
+@CrossOrigin("http://localhost:81")
 public class CollectionsController {
     @Resource
     private CollectionsService collectionsService;

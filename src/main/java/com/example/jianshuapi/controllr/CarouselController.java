@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 
 @RestController
 @RequestMapping("/carousel")
-@CrossOrigin("http://localhost")
+@CrossOrigin("http://localhost:81")
 public class CarouselController {
     @Resource
     private CarouselService carouselService;

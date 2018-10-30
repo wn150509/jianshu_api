@@ -24,4 +24,20 @@ public class ArticlesController {
         List<Articles>articlesList=articlesService.getUserArticle(id);
         return new ResponseUtil(0,"get all userArticles!",articlesList);
     }
+    @RequestMapping(value = "/ucomment/{id}")
+    public ResponseUtil getArticleComment(@PathVariable Integer id){
+        List<Articles>articlesList=articlesService.getOrderByComment(id);
+        return new ResponseUtil(0,"get all userArticles order by comment!",articlesList);
+    }
+    @RequestMapping(value = "/ulike/{id}")
+    public ResponseUtil getArticleLike(@PathVariable Integer id){
+        List<Articles>articlesList=articlesService.getOrderByLike(id);
+        return new ResponseUtil(0,"get all userArticles order by like!",articlesList);
+    }
+
+    @RequestMapping(value = "/p/{id}")
+    public ResponseUtil getOneArticle(@PathVariable Integer id){
+        Articles articles=articlesService.getOneArticle(id);
+        return new ResponseUtil(0,"get all userArticles order by like!",articles);
+    }
 }

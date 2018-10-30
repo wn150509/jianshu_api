@@ -1,8 +1,6 @@
 package com.example.jianshuapi.dao;
 
-import com.example.jianshuapi.entity.Articles;
 import com.example.jianshuapi.entity.SysUser;
-import com.example.jianshuapi.vo.HotUserVO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

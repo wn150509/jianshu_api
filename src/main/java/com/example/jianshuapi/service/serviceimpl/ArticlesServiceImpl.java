@@ -21,4 +21,19 @@ public class ArticlesServiceImpl implements ArticlesService {
     public List<Articles> getUserArticle(Integer id) {
         return articlesRepositry.findArticlesByUsersId(id);
     }
+
+    @Override
+    public List<Articles> getOrderByComment(Integer id) {
+        return articlesRepositry.findByUsersIdOrderByArticleCommentDesc(id);
+    }
+
+    @Override
+    public List<Articles> getOrderByLike(Integer id) {
+        return articlesRepositry.findByUsersIdOrderByArticleLikeDesc(id);
+    }
+
+    @Override
+    public Articles getOneArticle(Integer id) {
+        return articlesRepositry.findArticlesByArticleId(id);
+    }
 }

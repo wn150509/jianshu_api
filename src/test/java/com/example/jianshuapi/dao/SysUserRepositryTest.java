@@ -1,5 +1,6 @@
 package com.example.jianshuapi.dao;
 
+import com.example.jianshuapi.entity.Articles;
 import com.example.jianshuapi.entity.SysUser;
 import com.example.jianshuapi.service.ArticlesService;
 import com.example.jianshuapi.service.SysUserService;
@@ -21,20 +22,11 @@ public class SysUserRepositryTest {
     @Resource
     SysUserService sysUserService;
     @Resource
-    ArticlesService articlesService;
+    ArticlesRepositry articlesRepositry;
     @Test
     public void findHotUsers() throws Exception {
-        List<SysUser>sysUserList=sysUserService.getHotUsers();
-        List<Map>mapList=new ArrayList<>();
-        Map<Integer,String > map;
-        for (int i=0;i<sysUserList.size();i++){
-            map=new HashMap<>();
-            for (int j=0;j<3;j++){
-                map.put(sysUserService.getHotUsers().get(i).getUserId(),articlesService.getUserArticle(sysUserList.get(i).getUserId()).get(j).getArticleTitle());
-            }
-            mapList.add(map);
-        }
-        mapList.forEach(map1 -> System.out.println(map1));
+       List<Articles> articlesList=articlesRepositry.findByUsersIdOrderByArticleCommentDesc(1);
+       articlesList.forEach(articles -> System.out.println(articles));
     }
 
 }

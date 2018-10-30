@@ -6,6 +6,7 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 @Data
@@ -22,4 +23,7 @@ public class Articles {
     private Integer articleLike;
     private Integer usersId;
     private Integer collectionsId;
+    private Integer lookCount;
+    private Date createTime;
+    private Integer wordCount;
 }

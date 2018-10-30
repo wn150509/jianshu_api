@@ -13,4 +13,13 @@ public interface ArticlesRepositry extends JpaRepository<Articles,Integer> {
     List<Articles> findArticlesByUsersId(Integer id);
 
     List<Articles>findArticlesByCollectionsId(Integer id);
+
+//    @Query("select u from Articles u where u.usersId='#{id}'")
+//    List<Articles>orderbyComment(Integer id);
+
+    List<Articles>findByUsersIdOrderByArticleCommentDesc(Integer id);
+
+    List<Articles>findByUsersIdOrderByArticleLikeDesc(Integer id);
+
+    Articles findArticlesByArticleId(Integer id);
 }

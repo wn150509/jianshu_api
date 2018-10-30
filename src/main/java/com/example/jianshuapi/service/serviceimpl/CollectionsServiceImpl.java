@@ -21,6 +21,7 @@ public class CollectionsServiceImpl implements CollectionsService {
     private ArticlesRepositry articlesRepositry;
     @Resource
     private SysUserRepositry sysUserRepositry;
+
     @Override
     public List<Collections> findall() {
         return collectionsRepositry.findAll();

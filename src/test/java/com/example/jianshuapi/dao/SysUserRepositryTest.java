@@ -1,6 +1,7 @@
 package com.example.jianshuapi.dao;
 
 import com.example.jianshuapi.entity.Articles;
+import com.example.jianshuapi.entity.Comments;
 import com.example.jianshuapi.entity.SysUser;
 import com.example.jianshuapi.service.ArticlesService;
 import com.example.jianshuapi.service.SysUserService;
@@ -20,13 +21,17 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class SysUserRepositryTest {
     @Resource
-    SysUserService sysUserService;
+    SysUserRepositry sysUserRepositry;
     @Resource
     ArticlesRepositry articlesRepositry;
+    @Resource
+    CommentsRepositry commentsRepositry;
     @Test
     public void findHotUsers() throws Exception {
-       List<Articles> articlesList=articlesRepositry.findByUsersIdOrderByArticleCommentDesc(1);
-       articlesList.forEach(articles -> System.out.println(articles));
+       SysUser sysUser=new SysUser();
+       sysUser.setEmail("test1");
+       sysUser.setPassword("test1");
+       sysUserRepositry.save(sysUser);
     }
 
 }

@@ -25,4 +25,5 @@ public interface SysUserRepositry extends JpaRepository<SysUser, Integer> {
     List<SysUser> findHotUsers();
 
     List<SysUser>findSysUserByCollectionsId(Integer id);
+
 }
